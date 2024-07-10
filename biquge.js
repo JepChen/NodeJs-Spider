@@ -52,7 +52,7 @@ async function save_to_file(book_name, chapter_list) {
     let content = ''
     for (let index = 0; index < chapter_list.length; index++) {
         const element = chapter_list[index];
-        let txt = await sleep(500 * index).then(async () => {
+        let txt = await sleep(500).then(async () => {
             let data = await load_chapter_data(element.url_kv);
             eval(data)
             var chapter_data_str1 = decodeURIComponent(global.atob(chapter_data_str));
